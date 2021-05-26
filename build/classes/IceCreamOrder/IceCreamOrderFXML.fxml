@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="97.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IceCreamOrder.IceCreamOrderController">
+   <children>
+      <TitledPane animated="false" layoutY="10.0" prefHeight="84.0" prefWidth="263.0" text="Flavors">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="56.0" prefWidth="265.0">
+               <children>
+                  <RadioButton fx:id="chocolateFlav" layoutX="14.0" layoutY="18.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="91.0" selected="true" text="Chocolate">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="flavor" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="vanillaFlav" layoutX="105.0" layoutY="18.0" mnemonicParsing="false" text="Vanilla" toggleGroup="$flavor" />
+                  <RadioButton fx:id="strawberryFlav" layoutX="173.0" layoutY="18.0" mnemonicParsing="false" text="Strawberry" toggleGroup="$flavor" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="262.0" layoutY="10.0" prefHeight="84.0" prefWidth="155.0" text="Toppings">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="56.0" prefWidth="175.0">
+               <children>
+                  <CheckBox fx:id="nutsTopping" layoutX="14.0" layoutY="19.0" mnemonicParsing="false" text="Nuts" />
+                  <CheckBox fx:id="cherryTopping" layoutX="71.0" layoutY="17.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="92.0" text="Cherries" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+      <TitledPane animated="false" layoutX="417.0" layoutY="10.0" prefHeight="84.0" prefWidth="251.0" text="Order">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="56.0" prefWidth="204.0">
+               <children>
+                  <Button fx:id="calculateCostButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#onCalculateCost" text="Calculate Cost" />
+                  <Button fx:id="saveButton" layoutX="119.0" layoutY="15.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+                  <Button fx:id="restoreButton" layoutX="171.0" layoutY="15.0" mnemonicParsing="false" onAction="#onRestore" text="Restore" />
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</AnchorPane>
